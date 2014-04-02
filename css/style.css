@@ -1,0 +1,23 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+/* Map CSS */
+
+#map {
+	position:absolute;
+	top:0;
+	bottom:0;
+	width:100%;
+}
+
+#info {
+    background:rgba(255,255,255,1);
+    border:1px solid #fff;
+    position:absolute;
+    width:260px;
+    top:0;
+    right:0;
+    padding:0;
+    }
