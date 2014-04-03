@@ -17,9 +17,10 @@ body {
     background:rgba(255,255,255,1);
     border:1px solid #fff;
     position:absolute;
-    width:260px;
+    width:20%;
+    height: 100%;
     top:0;
-    right:0;
+    right:1;
     padding:0;
     z-index: 2;
     }
