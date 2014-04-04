@@ -21,13 +21,6 @@ a {
 	width:100%;
 }
 
-#dense {
-	position:absolute;
-    top: 60px;
-	left: 24%;
-	z-index: 10;
-}
-
 #info {
     background:rgba(255,255,255,1);
     border:1px solid #fff;
@@ -42,8 +35,8 @@ a {
 
 #map-ui {
   position: absolute;
-  top: 100px;
-  left: 25%;
+  top: 175px;
+  left: 24%;
   z-index: 100;
   padding:10px;
   background:#fff;
@@ -55,19 +48,41 @@ a {
   padding: 0;
 }
 
-div#plus {
-  background-image: url(img/plus.png);
-  background-repeat: no-repeat;
-  height: 100%;
-  padding: 0;
-  z-index: 6;
-}
 
 #search {
     position:absolute;
     font-family: 'Open Sans', sans-serif;
     top: 30px;
 	left: 24%;
+	height: 30px;
     width: 400px;
     z-index: 8;
+}
+
+#densite {
+	position:absolute;
+    top: 80px;
+	left: 24%;
+	z-index: 10;
+}
+
+#twitter {
+	position:absolute;
+    top: 30px;
+	right: 5%;
+	z-index: 10;
+}
+
+#timeline {
+	position:absolute;
+    bottom: 15px;
+	right: 5%;
+	z-index: 10;
+}
+
+#download {
+	position:absolute;
+    bottom: 0;
+	left: 24%;
+	z-index: 10;
 }
