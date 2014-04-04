@@ -11,18 +11,25 @@
 		<link rel="stylesheet" href="css/style.css"/>
 		<link href="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.css" rel="stylesheet" />
 		<script src="https://api.tiles.mapbox.com/mapbox.js/v1.6.2/mapbox.js"></script>
+		<script src="/mapbox.js/assets/csv2geojson.js"></script>
 
 
 	</head>
 
 	<body>
 
-		<div id="map">
+
 		<div id='map-ui'>
 		  <ul id='filters'>
 		  </ul>
 		</div>
-		<div id="info">
+		<div id="info"></div>
+		<div id="densite">
+			<img src="http://static.commentcamarche.net/www.commentcamarche.net/faq/images/9100-css-logo-medium-s-.png">
+		</div>
+		<input placeholder='Rechercher un hashtag, un lieu, un évènement...' id='search' />
+		<div id="map">
+		
 
 			<script>
 
@@ -46,9 +53,9 @@
 			            "coordinates": [2.3871222, 48.8536343]
 			        },
 			        "properties": {
-			            "title": "<p><h1>_WebSchoolFactory</h1></p>",
+			            "title": "<p>_WebSchoolFactory</p>",
 			            "images": ["img/wsf.jpg"],
-			            "description": "<p>208 boulevard Voltaire<br />75011 PARIS<br /><br />Entre école d’ingénieur, école de commerce/gestion et école multimédia <a>LIRE PLUS</a><br /><br />Type d'évènement: Innovation<br />Type de lieu: École<br/><br />Hashtag associé: #RockMyJPO</p>",
+			            "description": "<p>208 boulevard Voltaire<br />75011 PARIS<br /><br />Entre école d’ingénieur, école de commerce/gestion et école multimédia <a>LIRE PLUS</a><br /><br />Type d'évènement: Innovation<br />Type de lieu: École<br/><br />Hashtag associé: <a>#RockMyJPO</a></p>",
 			            "marker-color": "#00a8ff",
 			            "filter": "Innovation",
 			        }
@@ -62,7 +69,7 @@
 			        },
 			        "properties": {
 			            "title": "Le Cent Quatre",
-			            "description": "<p>5 Rue Curial<br />75019 PARIS<br /><br />Ce lieu de création et de production artistique est un établissement pluri-disciplinaire <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Incubateur<br/><br />Hashtag associé: #FENS</p>",
+			            "description": "<p>5 Rue Curial<br />75019 PARIS<br /><br />Ce lieu de création et de production artistique est un établissement pluri-disciplinaire <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Incubateur<br/><br />Hashtag associé: <a>#FENS</a></p>",
 			            "marker-color": "#00a8ff",
 			            "filter": "Start-up"
 			        }
@@ -75,7 +82,7 @@
 			        },
 			        "properties": {
 			            "title": "Anticafé",
-			            "description": "<p>79 Rue Quincampoix<br />75003 PARIS<br /><br />L'AntiCafé est un espace de coworking qui propose de payer au temps et de consommer à volonté<a>LIRE PLUS</a><br /><br />Type d'évènement: Entrepreunariat<br />Type de lieu: Collective<br/><br />Hashtag associé: #Bunkr</p>",
+			            "description": "<p>79 Rue Quincampoix<br />75003 PARIS<br /><br />L'AntiCafé est un espace de coworking qui propose de payer au temps et de consommer à volonté <a>LIRE PLUS</a><br /><br />Type d'évènement: Entrepreunariat<br />Type de lieu: Collective<br/><br />Hashtag associé: <a>#Bunkr</a></p>",
 			            "marker-color": "#a9e2ff",
 			            "filter": "Entrepreunariat",
 			            "opacity": 0.5
@@ -89,9 +96,8 @@
 			        },
 			        "properties": {
 			            "title": "Silicon Sentier",
-			            "description": "<p>12 passage Montmartre<br />75002 PARIS<br /><br />Silicon Sentier est une association d’entreprises destinée à promouvoir les startups et <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Collective<br/><br />Hashtag associé: #WSFconf</p>",
-			            "marker-color": "#a9e2ff",
-			            "opacity": 0.5
+			            "description": "<p>12 passage Montmartre<br />75002 PARIS<br /><br />Silicon Sentier est une association d’entreprises destinée à promouvoir les startups et <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Collective<br/><br />Hashtag associé: <a>#WSFconf<a></p>",
+			            "marker-color": "#00a8ff"
 			        }
 			    },
 			    {
@@ -102,7 +108,7 @@
 			        },
 			        "properties": {
 			            "title": "Backelite",
-			            "description": "<p>7 rue de Bucarest<br />75008 PARIS<br /><br />Backelite est une agence spécialisée dans le design, la conception et le développement <a>LIRE PLUS</a><br /><br />Type d'évènement: Design<br />Type de lieu: Entreprise<br/><br />Hashtag associé: #Backelite</p>",
+			            "description": "<p>7 rue de Bucarest<br />75008 PARIS<br /><br />Backelite est une agence spécialisée dans le design, la conception et le développement <a>LIRE PLUS</a><br /><br />Type d'évènement: Design<br />Type de lieu: Entreprise<br/><br />Hashtag associé: <a>#Backelite</a></p>",
 			            "marker-color": "#a9e2ff",
 			            "opacity": 0.5
 			        }
@@ -115,7 +121,7 @@
 			        },
 			        "properties": {
 			            "title": "Incubateur des Arts et Métiers de Paris",
-			            "description": "<p>151 boulevard de l'Hôpital<br />75013 PARIS<br /><br />L'Incubateur des Arts et Métiers de Paris : un dispositif complet d’aide à la création d’entreprise <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Incubateur<br/><br />Hashtag associé: #ENSAM</p>",
+			            "description": "<p>151 boulevard de l'Hôpital<br />75013 PARIS<br /><br />L'Incubateur des Arts et Métiers de Paris : un dispositif complet d’aide à la création d’entreprise <a>LIRE PLUS</a><br /><br />Type d'évènement: Start-up<br />Type de lieu: Incubateur<br/><br />Hashtag associé: <a>#ENSAM</a></p>",
 			            "marker-color": "#00a8ff"
 			        }
 			    },
@@ -127,7 +133,7 @@
 			        },
 			        "properties": {
 			            "title": "Localeo",
-			            "description": "<p>15 rue de l'Abbé Grégoire<br />75006 PARIS<br /><br />Localeo est un fournisseur d’applications hébergées au service des collectivités territoriales, des associations <a>LIRE PLUS</a><br /><br />Type d'évènement: Tech Digitale<br />Type de lieu: Collective<br/><br />Hashtag associé: #Localeo</p>",
+			            "description": "<p>15 rue de l'Abbé Grégoire<br />75006 PARIS<br /><br />Localeo est un fournisseur d’applications hébergées au service des collectivités territoriales, des associations <a>LIRE PLUS</a><br /><br />Type d'évènement: Tech Digitale<br />Type de lieu: Collective<br/><br />Hashtag associé: <a>#Localeo</a></p>",
 			            "marker-color": "#a9e2ff",
 			            "opacity": 0.5
 			        }
@@ -140,8 +146,9 @@
 			        },
 			        "properties": {
 			            "title": "Exiacesi",
-			            "description": "<p>297 rue de Vaugirard<br />75015 PARIS<br /><br />EXIA est l'école supérieure d'informatique du CESi : elle forme des informaticiens managers à la pointe des technologies.<br /><br />Type d'évènement: Tech Digitale<br />Type de lieu: École<br/><br />Hashtag associé: #EXIA</p>",
-			            "marker-color": "#00a8ff"
+			            "description": "<p>297 rue de Vaugirard<br />75015 PARIS<br /><br />EXIA est l'école supérieure d'informatique du CESi : elle forme des informaticiens managers à la pointe des technologies.<br /><br />Type d'évènement: Tech Digitale<br />Type de lieu: École<br/><br />Hashtag associé: <a>#EXIA</a></p>",
+			            "marker-color": "#a9e2ff",
+			            "opacity": 0.5
 			        }
 			    },
 			    {
@@ -152,7 +159,7 @@
 			        },
 			        "properties": {
 			            "title": "Printic",
-			            "description": "<p>45 rue Héricart<br />75015 PARIS<br /><br />Printic est une application mobile pour le partage et l'impression de ses photos.<br /><br />Type d'évènement: Démonstration<br />Type de lieu: Marketing<br/><br />Hashtag associé: #Printic</p>",
+			            "description": "<p>45 rue Héricart<br />75015 PARIS<br /><br />Printic est une application mobile pour le partage et l'impression de ses photos.<br /><br />Type d'évènement: Démonstration<br />Type de lieu: Marketing<br/><br />Hashtag associé: <a>#Printic</a></p>",
 			            "marker-color": "#a9e2ff",
 			            "opacity": 0.5
 			        }
@@ -176,9 +183,8 @@
 
 			// Clear the tooltip when map is clicked
 			map.on('move',function(e){
-			    document.getElementById('info').innerHTML = '<h2>Choisissez un évènement</h2>';
+			    document.getElementById('info').innerHTML = '<p>Choisissez un évènement</p>';
 			});
-
 
 
 			// find and store a variable reference to the list of filters

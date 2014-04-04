@@ -4,12 +4,12 @@ body {
 	padding: 0;
 }
 
-form {
-	z-index: 3;
-}
-
 p {
 	font-family: 'Open Sans', sans-serif;
+}
+
+a {
+	color: #00a8ff;
 }
 
 /* Map CSS */
@@ -19,7 +19,13 @@ p {
 	top:0;
 	bottom:0;
 	width:100%;
-	z-index: 1;
+}
+
+#dense {
+	position:absolute;
+    top: 60px;
+	left: 24%;
+	z-index: 10;
 }
 
 #info {
@@ -29,15 +35,15 @@ p {
     width:20%;
     top:0;
     right:1;
-    padding: 30px 15px;
+    padding: 0px 15px;
     z-index: 2;
     opacity: 0.9;
     }
 
 #map-ui {
   position: absolute;
-  top: 10px;
-  right: 10px;
+  top: 100px;
+  left: 25%;
   z-index: 100;
   padding:10px;
   background:#fff;
@@ -49,3 +55,19 @@ p {
   padding: 0;
 }
 
+div#plus {
+  background-image: url(img/plus.png);
+  background-repeat: no-repeat;
+  height: 100%;
+  padding: 0;
+  z-index: 6;
+}
+
+#search {
+    position:absolute;
+    font-family: 'Open Sans', sans-serif;
+    top: 30px;
+	left: 24%;
+    width: 400px;
+    z-index: 8;
+}
