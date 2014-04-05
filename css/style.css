@@ -1,4 +1,5 @@
 @import url('http://fonts.googleapis.com/css?family=Open+Sans');
+
 body {
 	margin: 0;
 	padding: 0;
@@ -6,6 +7,7 @@ body {
 
 p {
 	font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
 }
 
 h2 {
@@ -14,8 +16,14 @@ h2 {
 
 a {
 	color: #00a8ff;
+  text-decoration: none;
 }
 
+img#profile {
+  padding-top: 10px;
+  width: 280px;
+  height: 185px;
+}
 /* Map CSS */
 
 #map {
@@ -26,67 +34,105 @@ a {
 }
 
 #info {
-    background:rgba(255,255,255,1);
-    border:1px solid #fff;
-    position:absolute;
-    width:20%;
-    top:0;
-    right:1;
-    padding: 0px 15px;
-    z-index: 2;
-    opacity: 0.9;
-    }
-
-#map-ui {
-  position: absolute;
-  top: 175px;
-  left: 24%;
-  z-index: 100;
-  padding:10px;
-  background:#fff;
-}
-
-#map-ui ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
+  background:rgba(255,255,255,1);
+  border:1px solid #fff;
+  position:absolute;
+  width:285px;
+  top:0;
+  right:1;
+  padding: 0px 15px;
+  z-index: 2;
+  opacity: 0.9;
+  max-height: 100%;
+  overflow-y:hidden;
+  }
 
 #search {
-    position:absolute;
-    font-family: 'Open Sans', sans-serif;
-    top: 30px;
+  position:absolute;
+  font-family: 'Open Sans', sans-serif;
+  top: 30px;
 	left: 24%;
 	height: 30px;
-    width: 400px;
-    z-index: 8;
+  width: 400px;
+  z-index: 8;
 }
 
-#densite {
-	position:absolute;
-    top: 80px;
-	left: 24%;
-	z-index: 10;
+.densite {
+  top: 80px;
+  left: 24%;
+}
+
+.densite img {
+  position: relative;
+  opacity: 0.7;
+  z-index: 9;
+  }
+
+.densite p {
+  position: absolute;
+  padding: 0px 15px;
+  font-size: 1em;
+  top: 75px;
+  left: 24%;
+  opacity: 0.7;
+  z-index: 10;
 }
 
 #twitter {
 	position:absolute;
-    top: 30px;
+  font-size: 95%;
+  top: 30px;
 	right: 5%;
 	z-index: 10;
+  opacity: 0.7;
 }
 
 #timeline {
 	position:absolute;
-    bottom: 15px;
+  bottom: 15px;
 	right: 5%;
 	z-index: 10;
+  opacity: 0.7;
 }
 
 #download {
 	position:absolute;
-    bottom: 0;
+  padding: 0px 15px;
+  font-size: 95%;
+  background-color: #515151;
+  bottom: 0;
 	left: 24%;
 	z-index: 10;
+  opacity: 0.7;
+}
+
+a.download {
+  color: #fff;
+}
+
+a.twitter {
+  color: #fff;
+}
+
+p.twitter {
+  margin: 0px;
+  padding: 8px 10px;
+  background-color: #55acee;
+}
+.densite:hover {
+  opacity: 1;
+}
+#twitter:hover {
+  opacity: 1;
+}
+#timeline:hover {
+  opacity: 1;
+}
+#download:hover {
+  opacity: 1;
+}
+
+.leaflet-marker-icon,.leaflet-marker-shadow {
+    display: block;
+    cursor: pointer;
 }
