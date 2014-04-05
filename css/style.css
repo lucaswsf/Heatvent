@@ -50,6 +50,7 @@ img#profile {
 #search {
   position:absolute;
   font-family: 'Open Sans', sans-serif;
+  font-size: 0.9em;
   top: 30px;
 	left: 24%;
 	height: 30px;
@@ -119,6 +120,8 @@ p.twitter {
   padding: 8px 10px;
   background-color: #55acee;
 }
+
+
 .densite:hover {
   opacity: 1;
 }
